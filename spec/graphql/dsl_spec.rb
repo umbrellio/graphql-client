@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe GraphQL::DSL do
+describe GraphQL::DSL do
   describe 'query' do
     subject(:query) do
       GraphQL::DSL.query('test') do

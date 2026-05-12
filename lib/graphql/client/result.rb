@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'active_support/core_ext/hash/keys'
+
 module GraphQL
   module Client
     class Result
@@ -9,11 +11,9 @@ module GraphQL
       end
 
       def data
-        response[:data].each_value do |values|
-          values.map do
-            _1.transform_keys! { |key| key.to_s.underscore.to_sym }
-          end
-        end
+        return {} if response.empty?
+
+        response[:data]
       end
 
       def errors

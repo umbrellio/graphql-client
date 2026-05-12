@@ -3,6 +3,9 @@
 require_relative 'client/version'
 require_relative 'client/result'
 
+require 'qonfig'
+require 'oj'
+require 'rest-client'
 module GraphQL
   module Client
     class Error < StandardError; end
@@ -10,15 +13,17 @@ module GraphQL
     class Custom
       include Qonfig::Configurable
 
-      setting :timeout
-      setting :token
-      setting :access_id
-      setting :url
+      configuration do
+        setting :timeout
+        setting :token
+        setting :access_id
+        setting :url
 
-      validate 'timeout', :integer
-      validate 'token', :string
-      validate 'access_id', :string
-      validate 'url', :string
+        validate 'timeout', :integer
+        validate 'token', :string
+        validate 'access_id', :string
+        validate 'url', :string
+      end
 
       def initialize(configurations = self.class.config)
         @configurations = configurations.tap(&:validate!)

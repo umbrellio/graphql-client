@@ -2,6 +2,8 @@ PATH
   remote: .
   specs:
     graphql-client (0.1.0)
+      activesupport (>= 7.2.0)
+      oj (>= 3.17.0)
       qonfig (>= 0.30.0)
       rest-client (>= 2.1.0)
 
@@ -60,6 +62,10 @@ GEM
       drb (~> 2.0)
       prism (~> 1.5)
     netrc (0.11.0)
+    oj (3.17.0)
+      bigdecimal (>= 3.0)
+      ostruct (>= 0.2)
+    ostruct (0.6.3)
     parallel (1.28.0)
     parser (3.3.11.1)
       ast (~> 2.4.1)

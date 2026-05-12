@@ -29,6 +29,8 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'qonfig', '>= 0.30.0'
   spec.add_dependency 'rest-client', '>= 2.1.0'
+  spec.add_dependency 'oj', '>= 3.17.0'
+  spec.add_dependency 'activesupport', '>= 7.2.0'
 
   spec.add_development_dependency 'rspec', '~> 3.2'
   spec.add_development_dependency 'rake', '>= 13'
