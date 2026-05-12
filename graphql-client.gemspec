@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "A Ruby client for GraphQL APIs with a block-based DSL for building queries."
   spec.homepage = "https://example.com/graphql-client"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 3.1.0"
+  spec.required_ruby_version = ">= 3.4.5"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
