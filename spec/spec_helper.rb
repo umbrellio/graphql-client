@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
-require "graphql/client"
+require 'graphql/client'
+require 'graphql/dsl'
+
+require 'pry'
 
 RSpec.configure do |config|
-  config.example_status_persistence_file_path = ".rspec_status"
+  config.example_status_persistence_file_path = '.rspec_status'
 
   config.disable_monkey_patching!
 
