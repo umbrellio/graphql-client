@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = 'A Ruby client for GraphQL APIs.'
   spec.description = 'A Ruby client for GraphQL APIs with a block-based DSL for building queries.'
-  spec.homepage = 'https://example.com/graphql-client'
+  spec.homepage = 'https://github.com/umbrellio/graphql-client'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.4.5'
 
@@ -26,6 +26,9 @@ Gem::Specification.new do |spec|
     end
   end
   spec.require_paths = ['lib']
+
+  spec.add_dependency 'qonfig', '>= 0.30.0'
+  spec.add_dependency 'rest-client', '>= 2.1.0'
 
   spec.add_development_dependency 'rspec', '~> 3.2'
   spec.add_development_dependency 'rake', '>= 13'
